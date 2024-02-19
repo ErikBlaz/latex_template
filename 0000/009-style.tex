@@ -1,0 +1,151 @@
+\titleformat{\section}[hang]
+  {\normalfont\fontsize{18}{0}\fontinter \color{pcolor}}
+  {\bfseries\color{black}\thesection}
+  {1em}
+  {}
+  {}
+
+\titleformat{\subsection}[hang]
+  {\normalfont\fontsize{14}{0}\fontinter \color{pcolor}}
+  {\bfseries\color{black}\thesubsection}
+  {1em}
+  {}
+  {}
+
+\titleformat{\subsubsection}[hang]
+  {\normalfont\fontsize{12}{0}\fontinter \color{pcolor}}
+  {\bfseries\color{black}\thesubsubsection}
+  {1em}
+  {}
+  {}
+
+\newcommand{\contentsstyle}{
+    \titleformat{\chapter}[display]
+    {}
+    {\hspace{2cm}}
+    {10 pt}
+    {
+        \fontsize{18}{0} \sffamily
+        \vspace{4cm}
+        \begin{adjustwidth}{-2.5cm}{-5cm}
+        \hspace{2cm}\textcolor{pcolor}{\rule{1cm}{5pt}}
+        \fontnow
+            \begin{tikzpicture}[remember picture, overlay]
+                \node[anchor=north west, inner sep=0pt] at ([yshift=5cm, xshift=-5cm]current page.north west) {\includegraphics[width=1.2\linewidth]{images/curvas_portada4_color.png}};
+            \end{tikzpicture}
+        \vspace{-1cm}
+        {\ }\\
+        { \color{white}a \hspace{1.2cm}}
+        \color{black}
+        \MakeUppercase
+    }
+    [
+        \vspace{0cm}
+        \end{adjustwidth}
+    ]
+}
+
+\newcommand{\chapterstyle}{
+    \titleformat{\chapter}[display]
+    {\vspace{-70pt}\normalsize \huge  \color{black}} 
+    {
+        \fontnow
+    }
+    {0 pt}
+    {
+        \rotatebox{160}{
+            \begin{tikzpicture}[remember picture, overlay]
+                \node[anchor=north west, inner sep=0pt] at ([yshift=-7cm, xshift=-18cm]current page.north west) {\includegraphics[width=1\linewidth]{images/curvas_portada5_color.png}};
+            \end{tikzpicture}
+        }\\
+        \fontsize{130}{100}\color{pcolor}\sffamily\fontnow\thechapter
+        % \vspace{-2.5pt} 
+        \fontsize{18}{0}\color{black}\sffamily\ \fontnow\MakeUppercase
+    }
+    [\vspace{30pt}]
+}
+
+\titlecontents{chapter}[0.3em]
+{\vspace{0.5cm}\fontnow\large}
+{\contentslabel[\textbf{\color{pcolor}\thecontentslabel}]{1.0em}}%
+{\hspace{-1em}}
+{\hfill\contentspage}[\smallskip]
+
+\titlecontents{section}[0.3em]
+{\smallskip\fontnow}
+{\thecontentslabel\enspace\MakeUppercase{}}
+{\hspace{0em}}
+{\hfill\contentspage}
+
+\titlecontents{subsection}[2em]
+{\smallskip\fontnow\small\color{pcolor}}
+{\thecontentslabel\enspace}
+{\hspace*{0em}}
+{\hfill\contentspage}
+
+\fancyfoot{}
+\fancyhead{}
+
+\fancypagestyle{plain}{%
+\fancyfoot[L, R]{}
+\fancyhead[L, R]{}
+\fancyfoot[C]{\fontnow\thepage}
+}
+
+\fancyfoot[RE]{\fontnow\thepage} 
+\fancyfoot[C]{}
+\fancyfoot[LE]{
+    \reflectbox{
+        \rotatebox{90}{
+            \begin{tikzpicture}[remember picture, overlay]
+                \node[anchor=north west, inner sep=0pt] at ([yshift=-26.83cm, xshift=-11.35cm]current page.north west) {\includegraphics[width=1\linewidth]{images/curvas_portada6_color.png}};
+            \end{tikzpicture}
+        }
+    }
+}
+\fancyfoot[RO]{
+    \rotatebox{90}{
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[anchor=north west, inner sep=0pt] at ([yshift=-26.87cm, xshift=4.2cm]current page.north west) {\includegraphics[width=1\linewidth]{images/curvas_portada6_color.png}};
+        \end{tikzpicture}
+    }
+}
+
+\fancyfoot[LO]{\fontnow\thepage}
+\fancyhead[RO]{\fontnow\rightmark} % Número de página a la derecha
+\fancyhead[LE]{\fontnow\leftmark} % Número de página a la derecha
+\fancyhead[LO]{
+    \rotatebox{270}{
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[anchor=north west, inner sep=0pt] at ([yshift=-0.65cm, xshift=-12.3cm]current page.north west) {\includegraphics[width=1\linewidth]{images/curvas_portada6_color.png}};
+        \end{tikzpicture}
+    }
+}
+\fancyhead[RE]{
+        \scalebox{-1}[1]{
+        \rotatebox{270}{
+            \begin{tikzpicture}[remember picture, overlay]
+                \node[anchor=north west, inner sep=0pt] at ([yshift=-0.95cm, xshift=3.72cm]current page.north west) {\includegraphics[width=1\linewidth]{images/curvas_portada6_color.png}};
+            \end{tikzpicture}
+        }
+    }
+}
+\pagestyle{fancy}
+
+
+\mdfsetup{
+    backgroundcolor=pcolor!20,
+    linecolor=white
+}
+
+\lstset{
+    basicstyle=\fontsize{8}{12}\fontmenlo,
+        keywordstyle=\color{pcolor}\fontmenlo,
+        commentstyle=\color{pcolor}\fontmenlo,
+        stringstyle=\fontmenlo,
+        frame=single,
+        rulesepcolor=\color{black},
+        breaklines=true,
+}
+
+\emergencystretch=200pt

@@ -1,0 +1,105 @@
+\hypersetup{
+colorlinks,
+citecolor=cyan,
+filecolor=black,
+linkcolor=black,
+urlcolor=cyan,
+}
+\renewcommand{\sfdefault}{mdugm} %Garamond
+\graphicspath{ {./images/} }
+
+%\makeglossaries
+
+%% Formats
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+\setlength{\parindent}{20pt}
+}%
+\item[]}{\end{list}}
+
+\lstset{ frame=Ltb,
+framerule=0pt,
+aboveskip=0.5cm,
+framextopmargin=3pt,
+framexbottommargin=3pt,
+framexleftmargin=0.4cm,
+framesep=0pt,
+rulesep=.4pt,
+%
+backgroundcolor=\color{gray97},
+rulesepcolor=\color{pcolor},
+commentstyle=\color{codegreen},
+keywordstyle=\bf\color{magenta},
+stringstyle=\ttfamily,
+showstringspaces = false,
+basicstyle=\small\ttfamily,
+% commentstyle=\color{gray45},
+% keywordstyle=\bfseries,
+%
+numbers=left,
+numbersep=15pt,
+numberstyle=\tiny\color{pcolor}\fontmenlo,
+numberfirstline = false,
+breaklines=true,
+tabsize=2,
+}
+
+% minimizar fragmentado de listados
+\lstnewenvironment{listing}[1][]
+{\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+
+\lstdefinestyle{consola}
+{basicstyle=\scriptsize\bf\ttfamily,
+backgroundcolor=\color{gray75},
+}
+
+\lstdefinestyle{C++}
+{language=C++,
+}
+
+%% Configuración del margen inferior
+\renewcommand{\footrulewidth}{0.0pt} % Grosor de la línea del pie de página
+\renewcommand{\headrulewidth}{0pt} % Grosor de la línea del pie de página
+
+\DeclareCaptionFormat{myformat}{\fontinter{\textbfc{#1}\vspace{-8pt}\\\textcolor{pcolor}{\rule{\linewidth}{0.5pt}}\\\textmd{#3}}}
+\captionsetup[figure]{format=myformat}
+\captionsetup[lstlisting]{format=myformat}
+\captionsetup[table]{format=myformat}
+  \clubpenalty10000
+\widowpenalty10000
+
+\newcommand{\fancyfootnotetext}[2]{
+  \fancypagestyle{dingens}{
+      \fancyfoot[LO,RE]{\parbox{15cm}{\footnotemark[#1]\footnotesize #2}}%
+  }
+  \thispagestyle{dingens}
+}
+
+\lstset{basicstyle=\scriptsize\ttfamily,breaklines=true}
+
+% \defbibenvironment{sffamilybib}
+%   {\list
+%      {}
+%      {\fontnow}%
+%   % \renewcommand*{\makelabel}[1]{\hss##1}
+%   \renewcommand*{\makelabel}[1]{\hss##1}
+%       }
+%   {\endlist}
+%   {\item}
+% \DeclareMathSymbol{.}{\mathalpha}{letters}{"3B}
+\DeclareMathSymbol{,}{\mathalpha}{letters}{"3A}
+% \usepackage{siunitx}
+
+% \sisetup{input-ignore={.},
+     % group-separator = {,},
+     % input-decimal-markers={.},
+     % output-decimal-marker = {.},
+     % group-minimum-digits=4
+     % }
+\setlist[itemize]{label=•}

@@ -1,0 +1,75 @@
+\subsubsection{Subsubsection}
+
+\itemtitle{Item title}
+
+\itemtitleit{Item title}
+
+\itemtitlebf{Item title}
+
+\medskip
+\begin{mdframed}
+Primary colored background box.
+\end{mdframed}
+
+\begin{figure}[h!]
+    \figurefont
+    \limg{
+    \vspace{-1.5cm}
+    \vspace{0.25cm}
+        Text on the left of the figure.
+    }{
+        \centering
+        \includegraphics[width=7cm]{1000/example}
+    }
+    \label{nanoplot1}
+\vspace{-1cm}
+
+\captionof{figure}{Figure on the right.}
+\end{figure}
+
+\begin{figure}[h!]
+    \figurefont
+    \rimg{
+    \vspace{-1.5cm}
+    \vspace{0.25cm}
+        Text on the right of the figure.
+    }{
+        \centering
+        \includegraphics[width=7cm]{1000/example}
+    }
+    \label{nanoplot1}
+\vspace{-1cm}
+
+\captionof{figure}{Figure on the left.}
+\end{figure}
+
+\ex
+
+\begin{lstlisting}[language=c, caption={C example code.}, captionpos=b]
+int main(int argc, char** argv) {
+    return 0;
+}
+\end{lstlisting}
+
+Font style formats:
+\begin{itemize}
+    \item \textit{Italic style}
+    \item \textitc{Coloured italic style}    
+    \item \textbf{Bold style}
+    \item \textbfc{Coloured bold style}
+\end{itemize}
+
+\begin{table}[htbp]
+    \fontnow
+    \setstretch{1.20}
+    \centering
+    \begin{tabular}{l c c c}
+        & \textbfc{Column 1} & \textbfc{Column 2} & \textbfc{Column 3} \\
+        \hline
+        Row 1 &	- &	- &	- \\
+        Row 2 &	- & - & - \\
+        Row 3 &	- &	- & - \\
+    \end{tabular}
+    \label{tabular}
+\caption{Example table.}
+\end{table}

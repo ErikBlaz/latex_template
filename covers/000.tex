@@ -1,0 +1,74 @@
+\newgeometry{margin=0cm}
+{
+    \begin{titlepage}
+    \setmonofont[%
+        Path = ./fonts/inter/,
+        LetterSpace = 30, % Espaciado entre caracteres
+        BoldFont = Inter-Bold.ttf,
+        ItalicFont = Inter-Bold.ttf,
+        SlantedFont = Inter-Regular.ttf,
+    ]{Inter-Regular.ttf}
+
+    \vspace{1cm}
+    \scshape\Large \texttt{\ }
+
+    \hspace{15.8cm}
+    {\scshape\Large \texttt{SURNAME} \par}
+
+    \vspace{-1cm}
+    \hspace{1.0cm}
+    \scshape\Large \texttt{NAME}
+
+    \centering
+    \includegraphics[width=1.2cm]{images/logo_portada_color.png}
+
+    \vspace{-1.35cm}
+    \hspace{-4cm}
+    {\scshape\Large \texttt{23}}
+
+    \vspace{-0.88cm}
+    \hspace{3.5cm}
+    {\scshape\Large \texttt{24}}
+
+    \setmonofont[%
+        Path = ./fonts/inter/,
+        LetterSpace = 60, % Espaciado entre caracteres
+        BoldFont = Inter-Bold.ttf,
+        ItalicFont = Inter-Bold.ttf,
+        SlantedFont = Inter-Regular.ttf,
+    ]{Inter-Regular.ttf}
+
+    \vspace{7.5cm}
+    {\scshape\fontsize{35}{50} \texttt{TITLE}}
+
+    % \vspace{15pt}
+    % {\scshape\fontsize{35}{50} \texttt{DE \ LA}}
+
+    % \vspace{15pt}
+    % {\scshape\fontsize{35}{0} \texttt{MECÁNICA}}
+
+    \textcolor{pcolor}{\rule{6.5cm}{1pt}}
+    \vspace{0.4cm}
+
+    \setmonofont[%
+        Path = ./fonts/inter/,
+        LetterSpace = 30, % Espaciado entre caracteres
+        BoldFont = Inter-Bold.ttf,
+        ItalicFont = Inter-Bold.ttf,
+        SlantedFont = Inter-Regular.ttf,
+    ]{Inter-Regular.ttf}
+
+    {\scshape\fontsize{17}{50} \texttt{SUBTITLE}}
+    
+    \hspace{-2cm}
+    \rotatebox{30}{
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[anchor=north west, inner sep=0pt] at ([yshift=-18cm, xshift=-6cm]current page.north west) {\includegraphics[width=1.4\linewidth]{images/curvas_portada2_color.png}};
+        \end{tikzpicture}
+    }
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[anchor=north west, inner sep=0pt] at ([yshift=-18cm, xshift=-4cm]current page.north west) {\includegraphics[width=1.4\linewidth]{images/curvas_portada_color.png}};
+    \end{tikzpicture}
+\end{titlepage}
+}
+\restoregeometry

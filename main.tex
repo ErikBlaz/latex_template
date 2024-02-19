@@ -1,0 +1,74 @@
+\documentclass[10pt,a4paper,twoside]{report}
+ 
+%% Import packages
+\input{0000/003-packages.tex}
+\addbibresource{999-bibliography.bib}
+\defbibfilter{papers}{
+  type=article or
+  type=inproceedings or
+  type=book or
+  type=unpublished
+}
+%% Personalized commands
+\input{0000/004-commands.tex}
+
+%% Additional settings
+\input{0000/005-settings.tex}
+
+%% Include glossary
+\input{0000/006-glossary.tex}
+
+%% Include colors
+\input{0000/007-colors.tex}
+
+%% Include fonts
+\input{0000/008-fonts.tex}
+
+%% Acronyms
+\input{0000/001-acronyms.tex}
+\usepackage{adjustbox}
+\newsavebox\mybox
+
+%% Document begins here
+\begin{document}
+
+\input{0000/009-style.tex}
+
+\input{covers/000.tex}
+
+\contentsstyle
+\tableofcontents
+\listoffigures
+\listoftables
+\lstlistoflistings
+
+\fontnow
+\clearpage
+
+\chapterstyle
+
+% CHAPTER 1
+\input{1000/1000-chapter.tex}
+
+% APENDIX
+\appendixpageoff
+\begin{appendices}
+\input{A000/A000-appendix.tex}
+\end{appendices}
+
+\contentsstyle
+\printglossaries
+
+\printbibliography[
+    heading=bibintoc,
+    title={References},
+    type=misc
+]
+
+\printbibliography[
+    heading=bibintoc,
+    title={Bibliography},
+    filter=papers
+]
+
+\end{document}

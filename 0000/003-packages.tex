@@ -1,0 +1,99 @@
+%% Language and font encodings
+% \usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{lscape}
+\usepackage{tabto}
+\usepackage{fixltx2e}
+\usepackage{float} 
+\usepackage[paper=portrait,pagesize]{typearea}
+\usepackage{multicol}
+\usepackage{pdfpages}
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=3cm,left=2.5cm,right=2.5cm,marginparwidth=1.75cm]{geometry}
+
+%% Bibliography
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=none,
+]{biblatex}
+
+%% Useful packages
+\usepackage{dcolumn,booktabs}
+\usepackage{booktabs}
+\usepackage{csquotes}
+% \usepackage[acronym]{glossaries}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+%\usepackage{tabularx}
+\usepackage[colorlinks=true,linkcolor=black, urlcolor=blue]{hyperref}
+\usepackage{metalogo}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{pdflscape}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[Lenny]{fncychap}
+%\usepackage{microtype}
+%\usepackage{lmodern}
+\usepackage[toc,page]{appendix}
+% \usepackage{mathptmx}                 % font size extension
+% \usepackage{blindtext}                % blindtext
+% \usepackage{calc}                     % \setlength minus ...
+% \usepackage{glossaries}
+\usepackage[toc, nonumberlist, acronym]{glossaries}
+\usepackage{fontspec}
+% \setmainfont{./fonts/Inter-VariableFont_slnt,wght.ttf}
+% \usepackage{tocloft}
+\usepackage{titletoc}
+\setcounter{tocdepth}{2}
+% Code sections
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{times}
+
+\usepackage{tikz}
+
+\usepackage{listings}
+\usepackage[ ]{titlesec}  %
+\usepackage{txfonts}
+\usepackage{tcolorbox}
+\usepackage{changepage}
+\usepackage{numprint}
+\usepackage{mdframed}
+\usepackage{xspace}
+\usepackage[titles]{tocloft}
+\makeatletter
+\begingroup\let\newcounter\@gobble\let\setcounter\@gobbletwo
+  \globaldefs\@ne \let\c@loldepth\@ne
+  \newlistof{listings}{lol}{\lstlistlistingname}
+\endgroup
+\let\l@lstlisting\l@listings
+\AtBeginDocument{\addtocontents{lol}{\protect\addvspace{10\p@}}}
+\makeatother
+\renewcommand{\lstlistoflistings}{\listoflistings}
+\renewcommand{\cftlistingsfont}{\fontnow}
+\renewcommand{\cftlistingspagefont}{\color{pcolor}\fontnow}
+% \renewcommand{\cftlistingsdotsep}{\cftnodots}
+\renewcommand{\cftlistingspresnum}{\color{pcolor}}
+
+\renewcommand{\cftfigfont}{\fontnow}
+\renewcommand{\cftfigfont}{\color{pcolor}\fontnow}
+% \renewcommand{\cftlistingsdotsep}{\cftnodots}
+\renewcommand{\cftfigpresnum}{\color{pcolor}}
+\renewcommand{\cftfigpagefont}{\color{pcolor}\fontnow}
+
+\renewcommand{\cfttabfont}{\fontnow}
+\renewcommand{\cfttabfont}{\color{pcolor}\fontnow}
+% \renewcommand{\cftlistingsdotsep}{\cftnodots}
+\renewcommand{\cfttabpresnum}{\color{pcolor}}
+\renewcommand{\cfttabpagefont}{\color{pcolor}\fontnow}
+
+\usepackage[none]{hyphenat}
+\usepackage{setspace}
+\setstretch{1.20}
+\usepackage{float}

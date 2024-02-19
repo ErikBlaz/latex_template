@@ -1,0 +1,78 @@
+\newgeometry{margin=2cm}
+{
+    \begin{titlepage}
+    \setmonofont[%
+        Path = ./fonts/inter/,
+        LetterSpace = 30, % Espaciado entre caracteres
+        BoldFont = Inter-Bold.ttf,
+        ItalicFont = Inter-Bold.ttf,
+        SlantedFont = Inter-Regular.ttf,
+    ]{Inter-Regular.ttf}
+
+
+    \setmonofont[%
+        Path = ./fonts/now/,
+        LetterSpace = 0, % Espaciado entre caracteres
+        BoldFont = Now-Bold.otf,
+        ItalicFont = Now-Regular.otf,
+        SlantedFont = Now-Regular.otf,
+    ]{Now-Regular.otf}
+
+    % \vspace{-4cm}
+    % {\ }
+    \includegraphics[width=0.70cm]{images/logo_portada_color.png}
+
+    % \hspace{1cm}
+    \vspace{-1cm}
+    \hspace{0.7cm}
+    {\scshape\fontsize{14}{50} \texttt{ERIK BLÁZQUEZ}}
+
+    % \centering
+    \vspace{3.2cm}
+
+    {\scshape\fontsize{31}{50} \texttt{23/24 - Q1}}
+    % \vspace{-0.4cm}
+
+    \textcolor{pcolor}{\rule{6.0cm}{5pt}}
+
+    \setmonofont[%
+        Path = ./fonts/belleza/,
+        LetterSpace = 0, % Espaciado entre caracteres
+        BoldFont = Belleza-Regular.ttf,
+        ItalicFont = Belleza-Regular.ttf,
+        SlantedFont = Belleza-Regular.ttf,
+    ]{Belleza-Regular.ttf}
+
+    \vspace{1.2cm}
+    {\scshape\fontsize{65}{50}{ \texttt{FUNDAMENTOS}}}
+
+    \vspace{20pt}
+    {\scshape\fontsize{65}{50} \texttt{DE LA}}
+
+    \vspace{15pt}
+    {\scshape\fontsize{65}{0} \texttt{MECÁNICA}}
+
+    \vspace{20pt}
+
+    \setmonofont[%
+        Path = ./fonts/now/,
+        LetterSpace = 0, % Espaciado entre caracteres
+        BoldFont = Now-Bold.otf,
+        ItalicFont = Now-Regular.otf,
+        SlantedFont = Now-Regular.otf,
+    ]{Now-Regular.otf}
+
+    {\scshape\fontsize{14}{50} \texttt{GRADO EN FÍSICA}}
+    
+    \hspace{-2cm}
+    \rotatebox{35}{
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[anchor=north west, inner sep=0pt] at ([yshift=-24cm, xshift=-7cm]current page.north west) {\includegraphics[width=1.8\linewidth]{images/curvas_portada2_color.png}};
+        \end{tikzpicture}
+    }
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[anchor=north west, inner sep=0pt] at ([yshift=-19cm, xshift=-3cm]current page.north west) {\includegraphics[width=1.6\linewidth]{images/curvas_portada_color.png}};
+    \end{tikzpicture}
+\end{titlepage}
+}
+\restoregeometry
