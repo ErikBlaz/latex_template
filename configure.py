@@ -17,4 +17,4 @@ r = color.split(" ")[0]
 g = color.split(" ")[1]
 b = color.split(" ")[2]
 os.system("sed -i '/cnew = /c\cnew = \({}\, {}\, {}\, 255\)' change_color.py".format(r, g, b))
-os.system("sed -i '/pcolor/c\ \\\definecolor{}{}\{}\,{}\,{}' 007-colors.tex".format("{pcolor}", "{rgb}", "{" + str(int(r)/255.), int(g)/255., str(int(b)/255.) + "}"))
+os.system("sed -i '/pcolor/c\ \\\definecolor{}{}\{}\,{}\,{}' 0000/007-colors.tex".format("{pcolor}", "{rgb}", "{" + str(int(r)/255.), int(g)/255., str(int(b)/255.) + "}"))
