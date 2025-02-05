@@ -1,0 +1,103 @@
+\newcommand{\itemtitle}[1]{\vspace{5pt}\hspace{30pt}\color{pcolor}\fontinter\normalsize{#1}\normalsize{}\vspace{5pt}\color{black}\fontnow}
+\newcommand{\itemtitlebf}[1]{\vspace{5pt}\hspace{30pt}\color{pcolor}\fontinter\normalsize{\textbf{#1}}\normalsize{}\vspace{5pt}\color{black}\fontnow}
+\newcommand{\itemtitleit}[1]{\vspace{5pt}\hspace{30pt}\color{pcolor}\normalsize{\textitc{#1}}\normalsize{}\vspace{5pt}\color{black}}
+    \newcommand{\todo}[1]{\color{red}\textbf{\textit{TODO: }}\textit{#1}\color{black}}
+\newcommand{\centerl}[1]{\begin{center}#1\end{center}}
+
+% \renewcommand{\tablename}{Tabla} 
+% \renewcommand{\listfigurename}{Lista de \figurename s}
+% \renewcommand{\figurename}{Figura}
+% \renewcommand{\listtablename}{Lista de \tablename s}
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\lstlistlistingname}{Índice de \lstlistingname s}
+
+% \renewcommand{\appendix}{Anexo}
+\newcommand{\supi}[1]{\textsuperscript{#1}}
+\newcommand{\textbfc}[1]{\color{pcolor}\textbf{#1}\color{black}\xspace}
+\newcommand{\textc}[1]{\color{pcolor}#1\color{black}\xspace}
+\newcommand{\nosep}{\itemsep=3pt\topsep=0pt\partopsep=0pt\parskip=0pt\parsep=0pt}
+% \renewcommand{\contentsname}{Lista de Contenidos}
+
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\code}[1]{\colorbox{light-gray}{\fontsize{8}{10}\fontmenlo{#1}}}
+
+\newcommand{\listheaderfont}{\scriptsize\normalfont\scshape\color{red}}
+
+\newcommand{\ex}{\color{pcolor}\textbf{Ejemplo:}\color{black}}
+\newcommand{\textitc}[1]{\color{pcolor}\textit{#1}\color{black}\xspace}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\limg}[2]{
+\noindent\begin{minipage}{0.5\textwidth}
+        #1
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}{0.4\textwidth}
+        #2
+\end{minipage}
+}
+\newcommand{\rimg}[2]{
+\noindent\begin{minipage}{0.4\textwidth}
+    #2
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}{0.5\textwidth}
+    #1
+\end{minipage}
+}
+
+\renewcommand{\tab}{\hspace{1cm}}
+
+\newcommand{\codeblock}[1]{
+    \begin{lstlisting}
+        #1
+    \end{lstlisting}
+}
+
+\newcommand{\figurefont}{\fontnow\setstretch{1.20}}
+\newenvironment{equationenv}[0]{}{}
+
+\newcounter{exe_section}
+
+
+\newenvironment{exercise}[1]{
+\captionof{exercises}{#1}
+\setcounter{exe_section}{0}
+\vspace{5pt}
+
+}{
+    \setlength{\parsep}{5pt}%
+
+}
+
+\newenvironment{exe_section}[2]{
+\stepcounter{exe_section}
+\textbfc{\alph{exe_section})} \textit{#1}
+\vspace{5pt}
+\def\result{#2}
+}{
+    % \newline
+    \textbfc{Resultado: }\result
+    \vspace{5pt}
+
+
+}
+
+\DeclareMathOperator*{\coma}{\text{, }}
+\DeclareMathOperator*{\cte}{\ cte\ }
+\DeclareMathOperator*{\tq}{\text{ | }}
+\DeclareMathOperator*{\diver}{divergente}
+\DeclareMathOperator*{\conv}{convergente}
+
+\newcommand{\var}[1]{\textc{$#1$}}
+\newcommand{\difpart}[3]{\left(\frac{\partial #1}{\partial #2}\right)_{#3}}
+\newcommand{\difpartb}[3]{\left(\frac{\partial}{\partial #2} \left(#1\right)\right)_{#3}}
+\newcommand{\difpartbn}[3]{\left(\frac{\partial}{\partial #2} #1\right)_{#3}}
+
+\def\dbar{{\mkern6mu\mathchar'26\mkern-11mu d}}
+% \def\dbar{{\mathchar'26\mkern-12mu d}}
+
+\newcommand{\df}{\color{pcolor}\textbf{Definición:\ }\color{black}}
+\newcommand{\dem}{\color{pcolor}\textbf{Demostración:\ }\color{black}}
+\newcommand{\prop}{\color{pcolor}\textbf{Proposición:\ }\color{black}}
+\newcommand{\col}{\color{pcolor}\textbf{Colorario:\ }\color{black}}
+\newcommand{\lem}{\color{pcolor}\textbf{Lema:\ }\color{black}}

@@ -29,15 +29,15 @@ FORCE: ;
 .SECONDEXPANSION:
 
 $(IMAGES): config.cfg
-	./configure.py
-	./change_color.py -f $(subst _color,,$@) -o $@
+	python3 ./configure.py
+	python3 ./change_color.py -f $(subst _color,,$@) -o $@
 
 
 images: config.cfg
-	./configure.py
-	./change_color.py -f $(IMAGES_DIR)/curvas_portada.png -o $(IMAGES_DIR)/curvas_portada_color.png
-	./change_color.py -f $(IMAGES_DIR)/curvas_portada2.png -o $(IMAGES_DIR)/curvas_portada_color2.png
-	./change_color.py -f $(IMAGES_DIR)/logo_portada.png -o $(IMAGES_DIR)/logo_portada_color.png
+	python3 ./configure.py
+	python3 ./change_color.py -f $(IMAGES_DIR)/curvas_portada.png -o $(IMAGES_DIR)/curvas_portada_color.png
+	python3 ./change_color.py -f $(IMAGES_DIR)/curvas_portada2.png -o $(IMAGES_DIR)/curvas_portada_color2.png
+	python3 ./change_color.py -f $(IMAGES_DIR)/logo_portada.png -o $(IMAGES_DIR)/logo_portada_color.png
 	convert $(IMAGES_DIR)/logo_portada_color.png -resize 200x200 -gravity center -background "rgba(255,0,255,0)" -extent 200x200 $(IMAGES_DIR)/out.png
 
 review:
