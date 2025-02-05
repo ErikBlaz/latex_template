@@ -68,10 +68,13 @@ backgroundcolor=\color{gray75},
 \renewcommand{\headrulewidth}{0pt} % Grosor de la línea del pie de página
 
 \DeclareCaptionFormat{myformat}{\fontinter{\textbfc{#1}\vspace{-8pt}\\\textcolor{pcolor}{\rule{\linewidth}{0.5pt}}\\\textmd{#3}}}
+\DeclareCaptionFormat{exeformat}{\fontsize{10}{12}\fontnow\textbfc{#1} \textc{#3}}
 \captionsetup[figure]{format=myformat}
 \captionsetup[lstlisting]{format=myformat}
 \captionsetup[table]{format=myformat}
-  \clubpenalty10000
+\captionsetup[equations]{format=myformat}
+\captionsetup[exercises]{format=exeformat}
+\clubpenalty10000
 \widowpenalty10000
 
 \newcommand{\fancyfootnotetext}[2]{
@@ -103,3 +106,46 @@ backgroundcolor=\color{gray75},
      % group-minimum-digits=4
      % }
 \setlist[itemize]{label=•}
+
+
+\newcommand{\equationsname}{Ecuación}
+\newcommand{\listequationsname}{Lista de Ecuaciones}
+\newlistof{equations}{equ}{\listequationsname}
+% \renewcommand{\cftequationsindent}{1cm}  % no indentation
+\renewcommand{\cftequationsnumwidth}{1cm}  % no indentation
+% \cftsetindents{equations}{1.5em}{1cm}
+% \newcommand{\myequations}[1]{%
+% \addcontentsline{equ}{equation}{\protect\numberline{\theequation}#1}\par}
+% \AtBeginDocument{\addtocontents{equ}{\protect\addvspace{10\p@}}}
+
+\newcommand{\equations}[1]{%
+\refstepcounter{equation}
+\par\noindent\textbf{Equation \theequation. #1}
+\addcontentsline{equ}{equations}{\protect\addvspace{10\p@}}\par}
+% \addcontentsline{equ}{equations}{\protect\addvspace{10\p@}\numberline{\theequation}#1}\par}
+
+\renewcommand{\cftequationsfont}{\fontnow}
+\renewcommand{\cftequationsfont}{\color{pcolor}\fontnow}
+% \renewcommand{\cftlistingsdotsep}{\cftnodots}
+\renewcommand{\cftequationspresnum}{\color{pcolor}}
+\renewcommand{\cftequationspagefont}{\color{pcolor}\fontnow}
+
+% \AtBeginDocument{\addtocontents{equ}{\protect\addvspace{10\p@}}}
+\numberwithin{equations}{chapter}
+
+
+\newcommand{\exercisesname}{Ejercicio}
+\newcommand{\listexercisesname}{Lista de Ejercicios}
+\newlistof{exercises}{ex}{\listexercisesname}
+\newcommand{\exercises}[1]{%
+\refstepcounter{exercise}
+\par\noindent\textbf{Exercise \theexercise. #1}
+\addcontentsline{ex}{exercises}{\protect\numberline{\theexercise}#1}\par}
+
+\renewcommand{\cftexercisesfont}{\fontnow}
+\renewcommand{\cftexercisesfont}{\color{pcolor}\fontnow}
+\renewcommand{\cftexercisespresnum}{\color{pcolor}}
+\renewcommand{\cftexercisespagefont}{\color{pcolor}\fontnow}
+
+\numberwithin{exercises}{chapter}
+\captionsetup{justification=raggedright,singlelinecheck=false}

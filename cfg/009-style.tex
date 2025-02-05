@@ -92,9 +92,9 @@
 \fancyfoot[C]{\fontnow\thepage}
 }
 
-\fancyfoot[RE]{\fontnow\thepage} 
+\fancyfoot[RO]{\fontnow\thepage} 
 \fancyfoot[C]{}
-\fancyfoot[LE]{
+\fancyfoot[LO]{
     \reflectbox{
         \rotatebox{90}{
             \begin{tikzpicture}[remember picture, overlay]
@@ -103,7 +103,7 @@
         }
     }
 }
-\fancyfoot[RO]{
+\fancyfoot[RE]{
     \rotatebox{90}{
         \begin{tikzpicture}[remember picture, overlay]
             \node[anchor=north west, inner sep=0pt] at ([yshift=-26.87cm, xshift=4.2cm]current page.north west) {\includegraphics[width=1\linewidth]{images/curvas_portada6_color.png}};
@@ -111,17 +111,20 @@
     }
 }
 
-\fancyfoot[LO]{\fontnow\thepage}
-\fancyhead[RO]{\fontnow\rightmark} % Número de página a la derecha
-\fancyhead[LE]{\fontnow\leftmark} % Número de página a la derecha
-\fancyhead[LO]{
+\fancyfoot[LE]{\fontnow\thepage}
+
+\fancyhead[RE]{\fontnow\leftmark} % Número de página a la derecha
+% \fancyhead[RE]{\fontnow\rightmark} % Número de página a la derecha
+% \fancyhead[LO]{\fontnow\leftmark} % Número de página a la derecha
+\fancyhead[LO]{\fontnow\rightmark} % Número de página a la derecha
+\fancyhead[LE]{
     \rotatebox{270}{
         \begin{tikzpicture}[remember picture, overlay]
             \node[anchor=north west, inner sep=0pt] at ([yshift=-0.65cm, xshift=-12.3cm]current page.north west) {\includegraphics[width=1\linewidth]{images/curvas_portada6_color.png}};
         \end{tikzpicture}
     }
 }
-\fancyhead[RE]{
+\fancyhead[RO]{
         \scalebox{-1}[1]{
         \rotatebox{270}{
             \begin{tikzpicture}[remember picture, overlay]
